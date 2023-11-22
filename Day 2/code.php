@@ -7,19 +7,17 @@ if (isset($_POST['submit_button'])) {
     if (!preg_match("/^[a-zA-Z ]{2,50}$/", $naam) || trim($naam) == '') {
         echo "De string bevat andere tekens dan alleen letters en spaties.";
         header("Location: index.php");
-    }
+
     $email = cleaningAndValidateEmail($_POST['email']);
-    $bericht = cleaningData($_POST['bericht']);
     if (empty($email)) {
         echo "Het opgegeven e-mailadres is niet geldig.";
-        exit();
         header("Location: index.php");
-    } else if (empty($naam)) {
-        echo "Er klopt iets niet met jouw naam, houd er rekening mee dat hij groter dan 2 en kleiner dan 50 tekens moet zijn";
         exit();
-        header("Location: index.php");
-    } else if (empty($bericht) || strlen($bericht < 2)) {
+    }
+    $bericht = cleaningData($_POST['bericht']);
+    if (empty($bericht) || strlen($bericht < 3)) {
         echo "Controleer uw bericht, het bericht mag niet kleiner zijn dan 2 tekens.";
+        header("Location: index.php");
         exit();
     }
 
@@ -53,4 +51,5 @@ if (isset($_POST['submit_button'])) {
     }
 } else {
     header("Location: index.php");
+}
 }
