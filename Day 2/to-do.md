@@ -12,7 +12,7 @@ Verbeter de functionaliteit, veiligheid, en gebruikerservaring van het contactfo
 
 ### Stap 2: Verbeteren van Gebruikersfeedback
 - [V] Voeg foutmeldingen toe voor ongeldige invoer in `code.php`.
-- [ ] Zorg ervoor dat gebruikers terug kunnen gaan naar het formulier om fouten te corrigeren. // Vragen wat hiermee bedoelt wordt
+- [V] Zorg ervoor dat gebruikers terug kunnen gaan naar het formulier om fouten te corrigeren. // foutmelding moet nog worden toegevoegd.
 
 ### Stap 3: CSS Verbeteringen voor Toegankelijkheid
 - [V] Voeg `:focus` pseudo-klasse toe in `style.css` voor betere toetsenbordnavigatie.
