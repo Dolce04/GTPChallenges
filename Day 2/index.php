@@ -24,7 +24,7 @@ if (isset($_SESSION['foutmelding'])) {
 <body>
     <div class="container">
         <div class="content_container">
-            <p>GPTchallenge Day 1</p>
+            <p>GPTchallenge Day 2</p>
             <div class="image_wrapper">
             <img src="susan_csa.png" alt="">
         </div>
