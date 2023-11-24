@@ -43,7 +43,6 @@ function cleaningAndValidateEmail($data)
             $data = htmlspecialchars($data);
             return $data;
         } else {
-            echo "email not valid.";
             return false;
         }
 }
