@@ -23,6 +23,12 @@ if (isset($_POST['submit_button'])) {
         exit();
     }
     $bericht = cleaningData($_POST['bericht']);
+    if (strlen($bericht) >= 256 ) {
+        $_SESSION['foutmelding'] = "To many characters used in your message, the max is 255.";
+        $_SESSION['formulierData'] = $_POST;
+        header("Location: index.php");
+        exit();
+    }
     if (empty($bericht) || strlen($bericht < 3)) {
         $_SESSION['foutmelding'] = "Controleer uw bericht, het bericht mag niet kleiner zijn dan 2 tekens.";
         $_SESSION['formulierData'] = $_POST;

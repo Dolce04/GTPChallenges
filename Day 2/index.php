@@ -3,6 +3,11 @@ session_start();
 include_once("db.inc.php");
 include_once("functions.php");
 
+if (isset($_SESSION['foutmelding'])) {
+    echo "<div class='popup'>" . htmlspecialchars($_SESSION['foutmelding']) . "</div>";
+    unset($_SESSION['foutmelding']);
+}
+
     $formulierData = isset($_SESSION['formulierData']) ? $_SESSION['formulierData'] : [];
     unset($_SESSION['formulierData']);
 ?>
@@ -25,6 +30,7 @@ include_once("functions.php");
         </div>
         <div class="form_container">
             <form method="POST" action="code.php">
+
                 <label for="naam" class="labels">Naam</label>
                 <input class="input" type="text" name="naam" id="naam" placeholder="John Appleseed" value="<?=htmlspecialchars($formulierData['naam'] ?? '')?>" required>
 
@@ -33,6 +39,7 @@ include_once("functions.php");
 
                 <label for="berichtField" class="labels">Bericht</label>
                 <textarea name="bericht" id="berichtField" cols="30" rows="10" value=""><?=htmlspecialchars($formulierData['bericht'] ?? '')?></textarea>
+                <p class="mchar">Max 255.</p>
 
                 <button class="button" type="submit" name="submit_button">Verstuur</button>
             </form>
