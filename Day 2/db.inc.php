@@ -2,7 +2,7 @@
 
 //maak connectie variabelen 
 
-$dbname = "DayOne";
+$dbname = "GPTchallenges";
 $dbhost = "localhost";
 $dbuser = "bit_academy";
 $dbpass = "bit_academy";
