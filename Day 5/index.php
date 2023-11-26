@@ -24,7 +24,7 @@ unset($_SESSION['formulierData']);
 <body>
     <div class="container">
         <div class="content_container">
-            <p>GPTchallenge Day 4</p>
+            <p><a class="admin" href="admin.php">GPTchallenge Day 4</a></p>
             <div class="image_wrapper">
                 <img src="susan_csa.png" alt="">
             </div>

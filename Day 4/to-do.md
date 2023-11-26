@@ -1,7 +1,7 @@
-# Challenge Dag 4 - Uitbreiding Contactformulier
+# Challenge Dag 4 - Verfijning Contactformulier
 
 ## Doel
-Bouw voort op het huidige contactformulier door nieuwe functies toe te voegen en de bestaande functionaliteit te verfijnen.
+Verfijn het bestaande contactformulier door de functionaliteit te verbeteren en de gebruikerservaring te optimaliseren, rekening houdend met een basisniveau van PHP.
 
 ## Tijdsduur
 Richt je op ongeveer 45 minuten werk.
@@ -11,27 +11,26 @@ Gebruik PHP, HTML, CSS, PDO en MySQL.
 
 ## Takenlijst
 
-### Stap 1: Uitbreiding van Formulierfunctionaliteit
-- [ ] Voeg een uploadfunctie toe voor het bijvoegen van bestanden bij berichten.
-- [ ] Implementeer een captcha of een eenvoudige spambeveiliging voor het formulier.
+### Stap 1: Formulier Verfijningen
+- [V] Voeg een dropdown toe voor prioriteit van het bericht (bijv. "Laag", "Middel", "Hoog").
+- [V] Voeg een veld toe waar gebruikers kunnen aangeven hoe ze gecontacteerd willen worden (bijv. e-mail, telefoon).
 
-### Stap 2: Database Interactie Verbeteren
-- [ ] Voeg logging toe van alle inzendingen met tijdstempels.
-- [ ] Implementeer een eenvoudige manier om alle berichten te bekijken in een beveiligde adminpagina.
+### Stap 2: Database Interactie
+- [V] Breid de database uit om de nieuwe formulierinformatie op te slaan (prioriteit, contactvoorkeur).
+- [V] Zorg ervoor dat deze nieuwe gegevens correct worden opgeslagen en opgehaald.
 
-### Stap 3: Gebruikersinterface en -ervaring
-- [ ] Verbeter de formulierlay-out en -design voor een betere gebruikerservaring.
-- [ ] Voeg informatieve tooltips of hulpberichten toe bij formulieritems.
+### Stap 3: Gebruikersinterface Verbeteringen
+- [V] Werk de styling bij om de nieuwe formulierelementen te integreren.
+- [V] Verbeter de responsiviteit van de formulierpagina.
 
 ### Stap 4: Code Review en Optimalisatie
-- [ ] Herzie alle PHP- en HTML-bestanden voor consistentie en netheid.
-- [ ] Optimaliseer de code en database queries voor betere prestaties.
+- [V] Ga door je PHP-code en verbeter de leesbaarheid waar mogelijk.
+- [V] Zorg voor consistentie in code-stijl en naamgeving.
 
-### Stap 5: Testen en Debuggen
-- [ ] Test nieuwe functionaliteiten uitvoerig.
-- [ ] Los eventuele bugs of problemen op die je tegenkomt.
+### Stap 5: Testen en Foutopsporing
+- [V] Test het formulier grondig om ervoor te zorgen dat alle elementen correct werken.
+- [V] Verifieer dat alle nieuwe gegevens correct in de database worden opgeslagen.
 
 ## Afronding
-- [ ] Controleer of alle nieuwe functies correct werken.
-- [ ] Zorg dat de website responsief en toegankelijk blijft.
-
+- [V] Zorg ervoor dat alle functionaliteiten naar behoren werken.
+- [V] Controleer of de website nog steeds goed functioneert op verschillende apparaten en schermgroottes.
