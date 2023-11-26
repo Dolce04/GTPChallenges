@@ -31,7 +31,7 @@ if (isset($_POST['submit_button'])) {
         exit();
     }
     if (strlen($bericht) >= 256 ) {
-        $_SESSION['foutmelding'] = "To many characters used in your message, the max is 255.";
+        $_SESSION['foutmelding'] = "Too many characters used in your message, the max is 255.";
         $_SESSION['formulierData'] = $_POST;
         header("Location: index.php");
         exit();
