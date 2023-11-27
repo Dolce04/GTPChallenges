@@ -102,7 +102,7 @@ if (isset($_POST['submit_button'])) {
     } catch (PDOException $err) {
         file_put_contents($logFileDB, $err->getMessage() . PHP_EOL, FILE_APPEND);
     } catch (Exception $err) {
-        echo "Error: " . $err->getMessage();
+        file_put_contents($logFileError, $err->getMessage() . PHP_EOL, FILE_APPEND);
     }
 } else {
     header("Location: index.php");
