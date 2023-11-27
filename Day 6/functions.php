@@ -58,9 +58,9 @@ function retrieveMsg ($pdo, $data)
     $stmt->execute();
     $resultSet = $stmt->fetchALL(PDO::FETCH_ASSOC);
     } catch (PDOException $e) {
-        echo "failed due to error in DB :" . $e->getMessage();
+    file_put_contents($logFileDB, $e->getMessage() . PHP_EOL, FILE_APPEND);
     } catch (Exception $e) {
-        echo "failed due to error: " . $e->getMessage();
+    file_put_contents($logFileError, $e->getMessage() . PHP_EOL, FILE_APPEND);
     }
     return $resultSet;
 }
