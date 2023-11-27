@@ -3,6 +3,10 @@ session_start();
 include_once("db.inc.php");
 include_once("functions.php");
 
+$logFileDB = "../../logs/logs_GPTchallenge/Day 6/db.error.txt";
+$logFileError = "../../logs/logs_GPTchallenge/Day 6/error.txt";
+$logMsg = "";
+
 if (isset($_POST['submit_button'])) {
 
     // POST variables:
@@ -96,7 +100,7 @@ if (isset($_POST['submit_button'])) {
                 exit(0);
             }
     } catch (PDOException $err) {
-        echo "Error in database: " . $err->getMessage();
+        file_put_contents($logFileDB, $err->getMessage() . PHP_EOL, FILE_APPEND);
     } catch (Exception $err) {
         echo "Error: " . $err->getMessage();
     }
