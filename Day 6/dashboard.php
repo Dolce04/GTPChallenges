@@ -1,6 +1,12 @@
 <?php
+session_start();
 include_once("db.inc.php");
 include_once("functions.php");
+
+if (isset($_SESSION['foutmelding'])) {
+    echo "<div class='popup'>" . htmlspecialchars($_SESSION['foutmelding']) . "</div>";
+    unset($_SESSION['foutmelding']);
+}
 
 $resultSet = retrieveAllMsg($pdo,[]);
 
@@ -60,8 +66,8 @@ $resultSet = retrieveAllMsg($pdo,[]);
                                     <td class="table-row-data"><?=htmlspecialchars($row['contactvoorkeur']) ?></td>
                                     <td class="table-row-data"><a href="detail.php?id=<?=$row['id']?>" class="anchor-button-small">Open</a></td>
                                     <td class="table-row-data">
-                                        <form action="code.php" method="POST">
-                                            <button class="archive-button" type="submit" name="archive-button"><img src="img/archive-solid-24.png" alt="Archiveer"></button>
+                                        <form action="dashboard_code.php" method="POST">
+                                            <button class="archive-button" type="submit" value="<?=$row['id']?>" name="archive-button"><img src="img/archive-solid-24.png" alt="Archiveer"></button>
                                         </form>
                                     </td>
                                 </tr>
