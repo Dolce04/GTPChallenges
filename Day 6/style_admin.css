@@ -161,3 +161,14 @@ p {
     max-width: 200px;
     max-height: 150px;
 }
+
+.archive-button {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    justify-content: center;
+}
+
+.archive-button:hover {
+    cursor: pointer;
+}
