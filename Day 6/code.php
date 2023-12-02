@@ -10,6 +10,7 @@ $logMsg = "";
 if (isset($_POST['submit_button'])) {
 
     // POST variables (worden middels functions.php opgeschoond.):
+    $id = $_POST['id'];
     $naam = cleaningDataSpecial($_POST['naam']);
     $email = cleaningAndValidateEmail($_POST['email']);
     $bericht = cleaningData($_POST['bericht']);
