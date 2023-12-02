@@ -12,19 +12,19 @@ CREATE TABLE `Berichten` (
     `berichtType` enum('feedback', 'question', 'else') NOT NULL
 );
 
-ALTER TABLE `Berichten` ADD (
+ALTER TABLE `Berichten` ADD 
     `prio` enum('low', 'medium', 'high') NOT NULL,
-    `contactvoorkeur` enum('e-mail', 'telefonisch') NOT NULL
-);
+    `contactvoorkeur` enum('e-mail', 'telefonisch') NOT NULL;
+
+ALTER TABLE `Berichten` ADD
+    `status` enum('unseen', 'seen') NOT NULL;
 
 
 
 
 
 
-
-
--- indien nodig, 15 fictieve inserts:
+-- indien nodig, 30 fictieve inserts:
 
 -- INSERT INTO Berichten (naam, email, bericht, berichtType, prio, contactvoorkeur) VALUES 
 -- ('Alice', 'alice@example.com', 'Dit is een feedback bericht', 'feedback', 'low', 'e-mail'),
@@ -42,3 +42,18 @@ ALTER TABLE `Berichten` ADD (
 -- ('Mia', 'mia@example.com', 'Fantastisch product!', 'feedback', 'low', 'e-mail'),
 -- ('Noah', 'noah@example.com', 'Wanneer komt mijn bestelling aan?', 'question', 'medium', 'telefonisch'),
 -- ('Olivia', 'olivia@example.com', 'Ik wil mijn bestelling annuleren', 'else', 'high', 'e-mail');
+-- ('Paul', 'paul@example.com', 'Kan ik mijn leveradres wijzigen?', 'question', 'medium', 'e-mail'),
+-- ('Quinn', 'quinn@example.com', 'Hebben jullie ook eco-vriendelijke producten?', 'feedback', 'low', 'telefonisch'),
+-- ('Rachel', 'rachel@example.com', 'Ik wil een klacht indienen over een product', 'else', 'high', 'e-mail'),
+-- ('Steve', 'steve@example.com', 'Zeer tevreden met de snelle respons', 'feedback', 'low', 'e-mail'),
+-- ('Tina', 'tina@example.com', 'Hoe kan ik een product retourneren?', 'question', 'medium', 'telefonisch'),
+-- ('Uma', 'uma@example.com', 'Ik heb een idee voor een nieuw product', 'else', 'high', 'e-mail'),
+-- ('Victor', 'victor@example.com', 'Bedankt voor de uitstekende service!', 'feedback', 'low', 'e-mail'),
+-- ('Wendy', 'wendy@example.com', 'Wat is de garantieperiode van mijn product?', 'question', 'medium', 'telefonisch'),
+-- ('Xander', 'xander@example.com', 'Kunnen jullie meer informatie geven over de materialen?', 'else', 'high', 'e-mail'),
+-- ('Yasmin', 'yasmin@example.com', 'Ik waardeer jullie snelle levering', 'feedback', 'low', 'e-mail'),
+-- ('Zach', 'zach@example.com', 'Zijn er momenteel kortingen of promoties?', 'question', 'medium', 'telefonisch'),
+-- ('Amber', 'amber@example.com', 'Ik heb een suggestie voor jullie website', 'else', 'high', 'e-mail'),
+-- ('Bruce', 'bruce@example.com', 'Jullie klantenservice is top!', 'feedback', 'low', 'e-mail'),
+-- ('Cindy', 'cindy@example.com', 'Hoe volg ik mijn bestelling op?', 'question', 'medium', 'telefonisch'),
+-- ('Derek', 'derek@example.com', 'Is dit product ook in andere kleuren beschikbaar?', 'else', 'high', 'e-mail');
