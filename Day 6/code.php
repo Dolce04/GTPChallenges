@@ -9,11 +9,11 @@ $logMsg = "";
 
 if (isset($_POST['submit_button'])) {
 
-    // POST variables:
-    $naam = cleaningData($_POST['naam']);
+    // POST variables (worden middels functions.php opgeschoond.):
+    $naam = cleaningDataSpecial($_POST['naam']);
     $email = cleaningAndValidateEmail($_POST['email']);
     $bericht = cleaningData($_POST['bericht']);
-    $berichtType = $_POST['berichtType'];
+    $berichtType = htmlspecialchars($_POST['berichtType']);
     $prio = $_POST['prioType'];
     $contactvoorkeur = $_POST['contactMeType'];
 
@@ -68,7 +68,7 @@ if (isset($_POST['submit_button'])) {
         exit();
     }
 
-    // Insert query with try and catch:
+    // Insert query with try and catch (error handling will take place in logging):
     try {
         $query = 'INSERT INTO Berichten (
             naam,
