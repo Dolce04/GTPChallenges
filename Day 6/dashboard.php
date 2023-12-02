@@ -59,7 +59,11 @@ $resultSet = retrieveAllMsg($pdo,[]);
                                     <td class="table-row-data"><?=htmlspecialchars($row['prio']) ?></td>
                                     <td class="table-row-data"><?=htmlspecialchars($row['contactvoorkeur']) ?></td>
                                     <td class="table-row-data"><a href="detail.php?id=<?=$row['id']?>" class="anchor-button-small">Open</a></td>
-                                    <td class="table-row-data"><a href="detail.php?id=<?=$row['id']?>" class="anchor-button-small-archiveer">Archiveer</a></td>
+                                    <td class="table-row-data">
+                                        <form action="code.php" method="POST">
+                                            <button class="archive-button" type="submit" name="archive-button"><img src="img/archive-solid-24.png" alt="Archiveer"></button>
+                                        </form>
+                                    </td>
                                 </tr>
                                 <?php 
                             } 
