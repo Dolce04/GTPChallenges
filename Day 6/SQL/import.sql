@@ -19,6 +19,8 @@ ALTER TABLE `Berichten` ADD
 ALTER TABLE `Berichten` ADD
     `status` enum('unseen', 'seen') NOT NULL;
 
+ALTER TABLE `Berichten` ADD COLUMN `is_gearchiveerd` BOOLEAN NOT NULL DEFAULT FALSE;
+
 
 
 
