@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Koulen&family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Quicksand, sans-serif;
+}
+
+/* index.php */
+
+body {
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(253, 29, 29, 0.6) 50%,
+            rgba(131, 58, 180, 1) 100%);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    width: 95vw;
+    height: 95vh;
+    margin: 25px 25px;
+    background-color: rgba(0, 0, 0, 0.56);
+    border-radius: 25px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+/* Sidebar container */
+.sidebar {
+    flex-grow: 1;
+    min-width: 250px;
+    max-width: 400px;
+    background-color: rgba(200, 200, 200, 0.213);
+    border-radius: 25px 0px 0px 25px;
+    height: 100%;
+    padding: 0px 25px;
+    border-right: 2px solid rgba(225, 225, 225, 0.05);
+}
+
+.sidebar p {
+    color: #fff;
+    margin: 50px 0px 25px 0px;
+}
+
+.input {
+    display: block;
+    border: none;
+    padding: 0px 5px;
+    margin: 25px 0px;
+    border-radius: 8px;
+    width: 90%;
+    height: 40px;
+    font-size: medium;
+    font-weight: 500;
+    background-color: rgb(228, 227, 227);
+    color: rgb(90, 90, 90);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+.anchor-button {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+    width: 90%;
+    padding: 0px 5px;
+    height: 40px;
+    border-radius: 8px;
+    margin: 25px 0px;
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.anchor-button-small {
+    text-decoration: none;
+    width: 30%;
+    padding: 5px 5px;
+    height: 40px;
+    border-radius: 8px;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.anchor-button:hover,
+.anchor-button-small:hover {
+    white-space: pre-wrap;
+    height: 40px;
+    background-color: rgb(162, 162, 162);
+    color: #fff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+.anchor-button img {
+    margin: 0px 15px 0px 0px;
+    color: rgb(90, 90, 90);
+}
+
+/* Main content container */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    background-color: rgba(225, 225, 225, 0.213);
+    height: 100%;
+    padding: 0px 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.main-content p {
+    margin-bottom: 25px;
+}
+
+.top-content {
+    height: 65%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+    margin-bottom: 10px;
+}
+
+.content-table {
+    background-color: rgb(228, 227, 227);
+    text-align: center;
+    color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.bericht-container {
+    padding: 0px 10px;
+}
+
+.bottom-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    /* margin: 10px 0px; */
+    height: 35%;
+}
+
+.bottom-content textarea {
+    position: relative;
+    background-color: rgb(228, 227, 227);
+    text-align: left;
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 7px 7px 0px 0px;
+    resize: none;
+    font-size: medium;
+}
+
+form {
+    display: flex;
+    justify-content: right;
+    background-color: rgb(228, 227, 227);
+    width: 100%;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255 255 255);
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    border-bottom: 2px solid rgb(0 145 131);
+    background-color: rgb(3 189 173);
+}
+
+button:hover {
+    border-bottom: 1px solid rgb(0, 128, 115);
+    background-color: rgb(3 189 173);
+}
+
+/* cust content */
+.cust-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 250px;
+    max-width: 400px;
+    gap: 25px;
+    background-color: rgba(200, 200, 200, 0.213);
+    border-radius: 0px 25px 25px 0px;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 0px 25px 25px 25px;
+    border-left: 2px solid rgba(225, 225, 225, 0.05);
+}
+
+.cust-content p {
+    columns: #fff;
+    margin: 50px 0px 25px 0px;
+}
+
+.cust-info {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 0px 5px;
+    border-radius: 8px;
+    width: 100%;
+    height: fit-content;
+    font-size: medium;
+    font-weight: 400;
+    background-color: rgb(228, 227, 227);
+    color: rgb(90, 90, 90);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+.cust-info table {
+    display: block;
+
+}
+
+.cust-info th {
+    font-weight: 600;
+}
+
+#msgId {
+    color: blue;
+}
+
+/* cust-note-read */
+.cust-note-read {
+    flex-grow: 1;
+    margin: 12.5px 0px;
+}
+
+.cust-note-read pre {
+    white-space: pre-wrap;
+    background-color: rgba(200, 200, 200, 0.213);
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 5px;
+    border: 1px solid rgba(102, 102, 102, 1);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+/* cust-note-create */
+.cust-note-create {
+    flex-grow: 1;
+    margin: 12.5px 0px 12.5px 0px;
+}
+
+.cust-note-create p,
+.cust-note-read p {
+    margin: 5px 0px;
+}
+
+.cust-note-create textarea {
+    background-color: rgb(228, 227, 227);
+    width: 100%;
+    min-height: 225px;
+    resize: none;
+    padding: 5px;
+    border: 1px solid rgba(102, 102, 102, 1);
+    border-radius: 8px;
+    font-size: medium;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.6px);
+    -webkit-backdrop-filter: blur(11.6px);
+}
+
+.weokfw {
+    height: 75%;
+}
