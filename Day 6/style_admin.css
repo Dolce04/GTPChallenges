@@ -20,6 +20,14 @@ body {
     color: #fff;
 }
 
+.popup {
+    width: 100%;
+    background-color: rgb(215, 0, 0);
+    text-align: center;
+    padding: 20px;
+    font-size: large;
+    font-weight: 600;
+}
 .container {
     display: flex;
     width: 95vw;
@@ -118,6 +126,7 @@ p {
     flex-grow: 1;
     background-color: rgba(225, 225, 225, 0.213);
     border-radius: 0px 25px 25px 0px;
+    overflow-x: scroll;
 }
 
 .table-header-container {
