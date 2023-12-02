@@ -1,6 +1,10 @@
 <?php
 include_once("db.inc.php");
 
+//defined error log constants that directs to the error.txt files. need to make a function for this later.
+define('LOG_FILE_DB', '../../logs/logs_GPTchallenge/Day 6/db.error.txt');
+define('LOG_FILE_ERROR', "../../logs/logs_GPTchallenge/Day 6/error.txt");
+
 /* functions info:
 htmlspecialchars weerhoud Cros-site scripting (XSS), 
 XSS is een veelvoorkomende kwetsbaarheid in webapplicaties 
@@ -20,7 +24,14 @@ trim zorgt ervoor dat er aan het begin en einde van de string de spaties worden 
 */
 
 
-//function to clean data to output.
+//Simple cleaning function, sanitizes input from specialchars and trims both before and after from spaces.
+function cleaningData($data)
+{
+    $data = htmlspecialchars($data);
+    $data = trim($data);
+    return $data;
+}
+//Cleaning input data, make first letter capital and replace _ characters with spaces + both before and after will be trimmed from spaces.
 function cleaningDataSpecial($data)
 {
     $data = htmlspecialchars($data);
@@ -29,14 +40,7 @@ function cleaningDataSpecial($data)
     $data = trim($data);
     return $data;
 }
-
-function cleaningData($data)
-{
-    $data = htmlspecialchars($data);
-    $data = trim($data);
-    return $data;
-}
-
+//Sanitize and validate email. if return false, error message will be shown.
 function cleaningAndValidateEmail($data)
 {
     $data = filter_var($data, FILTER_SANITIZE_EMAIL);
@@ -48,19 +52,66 @@ function cleaningAndValidateEmail($data)
         }
 }
 
-// dashboard.php functions:
+/* dashboard.php functions: */
 
-function retrieveMsg ($pdo, $data)
+// PDO retrieved from db.inc.php. output the DBdata from $query request in an array in $resultSet.
+function retrieveAllMsg ($pdo, $query)
 {
     try{
-    $data = "SELECT * FROM Berichten";
-    $stmt = $pdo->prepare($data);
+    $query = "SELECT * FROM Berichten";
+    $stmt = $pdo->prepare($query);
     $stmt->execute();
     $resultSet = $stmt->fetchALL(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-    file_put_contents($logFileDB, $e->getMessage() . PHP_EOL, FILE_APPEND);
-    } catch (Exception $e) {
-    file_put_contents($logFileError, $e->getMessage() . PHP_EOL, FILE_APPEND);
+    } catch (PDOException $err) {
+    file_put_contents(LOG_FILE_DB, $err->getMessage() . PHP_EOL, FILE_APPEND);
+    } catch (Exception $err) {
+    file_put_contents(LOG_FILE_ERROR, $err->getMessage() . PHP_EOL, FILE_APPEND);
     }
     return $resultSet;
+}
+
+
+/* detail.php functions: */
+
+//Get id from clicked button, put id in variable and bind variable in query, receive all information from the id. error log is done by loggin.
+function receiveIdQuery ($pdo, $id)
+{
+    try {
+        $query = "SELECT * FROM Berichten WHERE id = :id";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        $resultSet = $stmt->fetch();
+        if ($resultSet['status'] === "unseen") {
+            valueCheck($pdo, $resultSet);
+        }
+    } catch (PDOException $err) {
+    file_put_contents(LOG_FILE_DB, $err->getMessage() . PHP_EOL, FILE_APPEND);
+    } catch (EXception $err) {
+    file_put_contents(LOG_FILE_ERROR, $err->getMessage() . PHP_EOL, FILE_APPEND);
+    }
+    return $resultSet;
+}
+
+function valueCheck($pdo, $resultSet){
+        $id = $resultSet['id'];
+        $status = "seen";
+
+        try {
+            $query = "UPDATE Berichten SET
+            status=:status
+            WHERE id=:id";
+
+            $stmt = $pdo->prepare($query);
+            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt->bindParam(':status', $status);
+            $stmt->execute();
+            $resultSet['status'] = "seen";
+        } catch (PDOException $err) {
+            file_put_contents(LOG_FILE_DB, $err->getMessage() . PHP_EOL, FILE_APPEND);
+            } catch (EXception $err) {
+            file_put_contents(LOG_FILE_ERROR, $err->getMessage() . PHP_EOL, FILE_APPEND);
+            }
+        return $resultSet;
+
 }
