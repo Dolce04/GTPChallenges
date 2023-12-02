@@ -1,5 +1,14 @@
 <?php
+session_start();
+include_once("db.inc.php");
+include_once("functions.php");
 
-$logFileDB = "../../logs/logs_GPTchallenge/Day 6/db.error.txt";
-$logFileError = "../../logs/logs_GPTchallenge/Day 6/error.txt";
-$logMsg = "";
+
+
+if (isset($_POST['archive-button'])) {
+
+    //Set needed Post variables into regular variables to put into the function.
+    $id = $_POST['archive-button'];
+    archiveRecord($pdo, $id);
+    // return header("Location:dashboard.php");
+}
