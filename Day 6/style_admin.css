@@ -150,7 +150,25 @@ p {
 
 .table-header-row-head:first-child {
     padding-left: 15px;
-    
+}
+
+.table-header-row-head a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.table-header-row-head a:hover {
+    text-decoration: underline;
+}
+
+#optionCycle a {
+    display: flex;
+    align-items: center;
+}
+
+#optionCycle img {
+    width: 16px;
 }
 
 .main-table-row {
