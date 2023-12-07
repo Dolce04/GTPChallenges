@@ -27,6 +27,7 @@ $resultSet = retrieveAllMsg($pdo,[]);
         <div class="sidebar">
             <p>Admin Dashboard</p>
             <input type="text" class="input" placeholder="         Quick Search...">
+            <a class="anchor-button" id="clearFilter" href="?resetFilters=true">Clear filters</a>
             <a class="anchor-button" id="overview-button" href="#"><img class="box-icon" src="img/layout-regular-24.png">Overview</a>
             <a class="anchor-button" href="#"><img class="box-icon" src="img/setting-regular-24.png">Settings</a>
         </div>
@@ -40,15 +41,15 @@ $resultSet = retrieveAllMsg($pdo,[]);
                     <!-- Headers items like "Name", "Customer ID". etc. -->
                     <table class="table-header">
                         <tr class="table-header-row">
-                            <th class="table-header-row-head">Msg ID</th>
-                            <th class="table-header-row-head" id="msgStatus">Status</th>
-                            <th class="table-header-row-head">Name</th>
-                            <th class="table-header-row-head">Email</th>
-                            <th class="table-header-row-head">Type</th>
-                            <th class="table-header-row-head">Prio</th>
-                            <th class="table-header-row-head">ContactType</th>
+                            <th class="table-header-row-head"><a href="?order=id&&sort=<?=$_SESSION['sort']?>&&sortClicked=true">Msg ID</a></th>
+                            <th class="table-header-row-head" id="msgStatus"><a href="?order=status&&sort=<?=$_SESSION['sort']?>&&sortClicked=true">Status</a></th>
+                            <th class="table-header-row-head"><a href="?order=naam&&sort=<?=$_SESSION['sort']?>&&sortClicked=true">Name</a></th>
+                            <th class="table-header-row-head"><a href="?order=email&&sort=<?=$_SESSION['sort']?>&&sortClicked=true">Email</a></th>
+                            <th class="table-header-row-head" id="optionCycle"><a href="?typeCycle=true">Type<img src="img/filter-alt-regular-24.png" alt=""></a></th>
+                            <th class="table-header-row-head" id="optionCycle"><a href="?prioCycle=true">Prio<img src="img/filter-alt-regular-24.png" alt=""></a></th>
+                            <th class="table-header-row-head"><a href="?order=contactvoorkeur&&sort=<?=$_SESSION['sort']?>&&sortClicked=true">ContactType</a></th>
                             <th class="table-header-row-head">Details</th>
-                            <th class="table-header-row-head">Details</th>
+                            <th class="table-header-row-head"></th>
 
                         </tr>
                         <!-- Table Rows -->
