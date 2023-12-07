@@ -28,6 +28,7 @@ $resultSet = receiveIdQuery($pdo,$_GET['id']);
         <div class="main-content">
             <!-- Header section -->
             <p>Customer message</p>
+            <p class="createDate">Created: <?php if (!empty($resultSet)) { echo htmlspecialchars($resultSet['gemaakt_op']);}?></p>
             <div class="top-content">
                 <!-- Toolbar section, content like search, filters, etc. -->
 
