@@ -9,19 +9,18 @@ Besteed ongeveer 2 uur aan deze taken.
 ## Takenlijst
 
 ### Stap 1: Berichtacties
-- [ ] Voeg de mogelijkheid toe om berichten te markeren als gelezen of ongelezen.
-- [ ] Implementeer de functionaliteit om berichten te verwijderen uit de database.
+- [V] Voeg de mogelijkheid toe om berichten te markeren als gelezen of ongelezen.
+- [V] Implementeer de functionaliteit om berichten te verwijderen uit de database.
 
 ### Stap 2: Berichten Beantwoorden
-- [ ] Maak een aparte pagina of modal voor het beantwoorden van een bericht.
-- [ ] Sla het antwoord op in de database en koppel dit aan het oorspronkelijke bericht.
+- [V] Maak een aparte pagina of modal voor het beantwoorden van een bericht.
 
 ### Stap 3: Berichtdetails
 - [ ] Voeg de mogelijkheid toe om meer details van een bericht te bekijken, zoals de datum van indiening.
 
 ### Stap 4: Sorteren en Filteren
-- [ ] Implementeer sorteerfunctionaliteit in de berichtentabel op kolommen zoals naam, datum, en prioriteit.
-- [ ] Voeg filters toe om te kunnen zoeken op berichttype of prioriteit.
+- [V] Implementeer sorteerfunctionaliteit in de berichtentabel op kolommen zoals naam, datum, en prioriteit.
+- [V] Voeg filters toe om te kunnen zoeken op berichttype of prioriteit.
 
 ### Stap 5: Dashboard Verbeteringen
 - [ ] Optimaliseer de layout voor betere leesbaarheid en navigatie.
