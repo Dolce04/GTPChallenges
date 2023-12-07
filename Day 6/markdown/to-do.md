@@ -16,7 +16,7 @@ Besteed ongeveer 2 uur aan deze taken.
 - [V] Maak een aparte pagina of modal voor het beantwoorden van een bericht.
 
 ### Stap 3: Berichtdetails
-- [ ] Voeg de mogelijkheid toe om meer details van een bericht te bekijken, zoals de datum van indiening.
+- [V] Voeg de mogelijkheid toe om meer details van een bericht te bekijken, zoals de datum van indiening.
 
 ### Stap 4: Sorteren en Filteren
 - [V] Implementeer sorteerfunctionaliteit in de berichtentabel op kolommen zoals naam, datum, en prioriteit.
