@@ -117,8 +117,13 @@ body {
     padding-bottom: 50px;
 }
 
-.main-content p {
-    margin-bottom: 25px;
+.cstMessage{
+    margin-bottom: 9px;
+}
+
+.createDate {
+    color: rgba(225, 225, 225, 0.5);
+    font-size: small;
 }
 
 .top-content {
