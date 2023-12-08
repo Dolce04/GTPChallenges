@@ -21,16 +21,16 @@ Verbeter de functionaliteit, veiligheid, en gebruikerservaring van het contactfo
 
 ### Stap 4: Beveiligingsverbeteringen
 - [V] Controleer of `htmlspecialchars` op de juiste manier wordt gebruikt in `functions.php`.
-- [ ] Overweeg het gebruik van Content Security Policy (CSP) in de HTML-header voor extra beveiliging.
+- [V] Overweeg het gebruik van Content Security Policy (CSP) in de HTML-header voor extra beveiliging.
 
 ### Stap 5: Code Review en Refactoring
-- [ ] Herzie alle PHP- en HTML-bestanden voor consistentie en netheid.
-- [ ] Refactor code waar nodig voor betere leesbaarheid en onderhoudbaarheid.
+- [V] Herzie alle PHP- en HTML-bestanden voor consistentie en netheid.
+- [V] Refactor code waar nodig voor betere leesbaarheid en onderhoudbaarheid.
 
 ### Stap 6: Testen en Debuggen
-- [ ] Test het formulier grondig met verschillende invoer.
-- [ ] Los eventuele bugs of problemen op die je tegenkomt.
+- [V] Test het formulier grondig met verschillende invoer.
+- [V] Los eventuele bugs of problemen op die je tegenkomt.
 
 ## Afronding
-- [ ] Controleer of alle functionaliteiten naar behoren werken.
-- [ ] Vraag feedback van een peer of mentor over je project.
+- [V] Controleer of alle functionaliteiten naar behoren werken.
+- [V] Vraag feedback van een peer of mentor over je project.
