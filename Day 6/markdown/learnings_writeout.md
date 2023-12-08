@@ -70,3 +70,10 @@ Hier is wat er gebeurt:
 DB_HOST: Dit is de constante die de hostname van je database bevat, zoals gedefinieerd door define('DB_HOST', 'localhost');. Het kan 'localhost' zijn of een andere hostnaam.
 ";dbname=": Na de hostname voeg je deze string toe om het deel van de DSN te vormen dat de databasenaam specificeert.
 . en DB_NAME: Opnieuw gebruik je een punt om de string te verbinden met de waarde van de constante DB_NAME, die de naam van je database bevat.*
+
+### Stap 4: Sorteren en Filteren:
+Implementeer sorteerfunctionaliteit in de berichtentabel op kolommen zoals naam, datum, en prioriteit.
+
+Het Implementeren van een sorteerfunctie vergt veel gebruik van $_GET en $_SESSION functies, daarnaast is het goed en netjes structureren van je functie erg belangrijk om de juiste query aan te spreken.
+
+Je moet goed rekening houden 
