@@ -4,8 +4,8 @@
 
 $dbname = "GPTchallenges";
 $dbhost = "localhost";
-$dbuser = "bit_academy";
-$dbpass = "bit_academy";
+$dbuser = "**";
+$dbpass = "**";
 
 //maak DSN (Data source name) :het bevat de nodige informatie om verbinding te maken met een database.
 $dsn = "mysql:host=$dbhost;dbname=$dbname";
